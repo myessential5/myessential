@@ -1,0 +1,265 @@
+    @import "//cdn.jsdelivr.net/npm/font-kopub@1.0";
+
+    /* 공통 CSS */
+    html, body{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        cursor: crosshair;
+    }
+
+    #wrap{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main{
+        flex: 1;
+        margin-top: 150px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: rgb(243, 243, 243);
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* 공통 CSS _ 헤더 영역 */
+
+    #header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 999;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header.scrolled{
+        background-color: rgb(0, 0, 0);
+        transition: background-color 1s ease-in;
+    }
+
+    #header.scrolled .header-title a,
+    #header.scrolled .header-nav a {
+    color: white;
+    }
+
+    .header-title{
+        font-size: 2.5rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-left: 40px;
+    }
+
+    .header-title p{
+        margin: 0;
+        font-weight: 900;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-title p:hover{
+        font-weight: 100;
+    }
+
+    .header-nav{
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    .header-nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .header-nav li{
+        float: left;
+        margin-left: 40px;
+    }
+
+    .header-nav a{
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-nav a:hover{
+        font-weight: 900;
+    }
+
+
+    /* 공통 CSS _ footer 영역 */
+
+    #footer{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    #footer p{
+        margin: 0;
+    }
+
+    .footer-nameTag{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-subTag{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+        margin-top: 30px; 
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .footer-subTag p{
+        margin-top: 10px;
+    }
+
+    .footer-nameTag p{
+        padding: 30px;
+        font-weight: 300;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .footer-nameTag p:hover{
+        font-weight: 900;   
+    }
+
+    /* 본인의 이름을 작성한 다음 자신의 주석 아래 부분에 CSS 코드를 작성해주세요. */
+
+    /* 권호준 CSS */
+
+    #carabiner-banner{
+        width: 100%;
+        margin-top: 150px;
+    }
+
+    #carabiner-banner img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .article-main{
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        column-gap: 40px;
+        row-gap: 80px;
+        font-family: "KoPub Dotum" ,sans-serif;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-weight: 900;
+        font-size: 1.25rem;
+        line-height: 160%;
+    }
+
+    #main::selection{
+        background-color: rgb(229, 42, 42);
+        color: white;
+    }
+
+    .article-main p{
+        margin: 0;
+    }
+
+    .article-griditem img{
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .article-griditem p {
+        display: inline-block;
+        border: 2px dashed black;
+        padding: 10px;
+}
+
+    .article-main-2{
+        margin: 200px 40px 0 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+        font-family: "KoPub Dotum" ,sans-serif;
+        font-weight: 900;
+        font-size: 1.25rem;
+        line-height: 160%;
+    }
+
+    .article-main-2 img{
+        width: 30%;
+    }
+
+    .article-main-2 p{
+        width: 30%;
+        border: 2px dashed black;
+        padding: 10px;
+    }
+
+        .article-main-3{
+        margin: 200px 40px 0 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 50px;
+        align-items: center;
+        font-family: "KoPub Dotum" ,sans-serif;
+        font-weight: 900;
+        font-size: 1.25rem;
+        line-height: 160%;
+        border: 2px dashed black;
+        padding: 10px;
+    }
+
+    .grid-text, .grid-image{
+        flex: 1 1 calc(30% - 50px);
+        box-sizing: border-box;
+        min-width: 200px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .grid-image{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .article-main-4{
+        margin: 200px 40px 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        font-family: "KoPub Dotum" ,sans-serif;
+        font-weight: 900;
+        font-size: 1.25rem;
+        line-height: 160%;
+    }
+
+    .lastgrid img{
+        width: 100%;
+    }
+
+    .article-main-4 p{
+        border: 2px dashed black;
+        padding: 10px;
+    }
+
