@@ -1,0 +1,517 @@
+    @import "//cdn.jsdelivr.net/npm/font-kopub@1.0";
+
+    html, body{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        cursor: crosshair;
+    }
+
+    #wrap{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    #main{
+        flex: 1;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* 공통 CSS _ 헤더 영역 */
+
+    #header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 999;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header.scrolled{
+        background-color: rgb(0, 0, 0);
+        transition: background-color 1s ease-in;
+    }
+
+    #header.scrolled .header-title a,
+    #header.scrolled .header-nav a {
+    color: white;
+    }
+
+    .header-title{
+        font-size: 2.5rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-left: 40px;
+    }
+
+    .header-title p{
+        margin: 0;
+        font-weight: 900;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-title p:hover{
+        font-weight: 100;
+    }
+
+    .header-nav{
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    .header-nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .header-nav li{
+        float: left;
+        margin-left: 40px;
+    }
+
+    .header-nav a{
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-nav a:hover{
+        font-weight: 900;
+    }
+
+    /* 글 페이지 */
+
+    #main{
+        margin-top: 100px;
+    }
+
+    .article-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-top p{
+        margin: 0;
+    }
+
+    .article-topMainText{
+        font-size: 7.5rem;
+        font-weight: 900;
+    }
+
+    .article-topSubText{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .article-main{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-family: "KoPub Dotum" ,sans-serif;
+        font-weight: 900;
+        font-size: 1.25rem;
+        line-height: 160%;
+        border: 1px dashed black;
+    }
+
+    .article-main::selection{
+        background-color: rgb(229, 42, 42);
+        color: white;
+    }
+
+    .article-main p{
+        margin: 0;
+        padding: 10px;
+        
+    }
+
+    .article-gridContent img{
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* footer 영역 */
+
+    #footer{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    #footer p{
+        margin: 0;
+    }
+
+    .footer-nameTag{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-subTag{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+        margin-top: 30px; 
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .footer-subTag p{
+        margin-top: 10px;
+    }
+
+    .footer-nameTag p{
+        font-weight: 300;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .footer-nameTag p:hover{
+        font-weight: 900;   
+    }
+
+
+
+    /* 김유빈 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: white;
+        min-height: 100vh;
+    }
+    
+    .yubin-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .yubin-header-zone {
+        width: 100%;
+        padding: 240px 40px 0;
+    }
+    
+    .yubin-header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .yubin-main-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: normal;
+        color: black;
+    }
+    
+    .yubin-sub-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: normal;
+        color: black;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    .yubin-author-name {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: normal;
+        text-align: right;
+        color: black;
+    }
+    
+    .yubin-text-intro,
+    .yubin-text-block {
+        padding: 0 40px;
+        max-width: 505px;
+        margin-top: 384px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        text-align: center;
+        color: black;
+    }
+    
+    .yubin-img-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 0 40px;
+        margin-top: 176px;
+        width: 100%;
+    }
+    
+    .yubin-img-first {
+        width: 901px;
+        height: 640px;
+        object-fit: cover;
+    }
+    
+    
+    .yubin-title-highlight {
+        display: flex;
+        justify-content: center;
+        padding: 0 40px;
+        width: 100%;
+        margin-top: 565px;
+    }
+    
+    .yubin-title-dual {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        color: black;
+        max-width: 1274px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .yubin-title-dual span:nth-child(2) {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    .yubin-img-second {
+        width: 1236px;
+        height: 927px;
+        object-fit: cover;
+    }
+    
+    .yubin-img-third {
+        width: 1120px;
+        height: 1493px;
+        object-fit: cover;
+    }
+    
+    .yubin-img-fourth {
+        width: 1221px;
+        height: 916px;
+        object-fit: cover;
+    }
+    
+    .yubin-gallery {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding: 0 40px;
+        margin-top: 384px;
+        width: 100%;
+    }
+    
+    .yubin-gallery-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .yubin-gallery-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .yubin-img-large {
+        width: 656px;
+        height: 875px;
+        object-fit: cover;
+    }
+    
+    .yubin-img-small {
+        width: 494px;
+        height: 438px;
+        object-fit: cover;
+    }
+    
+    .yubin-img-small:last-child {
+        height: 371px;
+    }
+    
+    .yubin-img-final {
+        width: 1445px;
+        height: 1084px;
+        object-fit: cover;
+        margin-bottom: 96px;
+    }
+    
+    @media (max-width: 1024px) {
+        .yubin-img-first {
+            width: 676px;
+            height: 480px;
+        }
+    
+        .yubin-img-second {
+            width: 800px;
+            height: 600px;
+        }
+    
+        .yubin-img-third {
+            width: 600px;
+            height: 800px;
+        }
+    
+        .yubin-img-fourth {
+            width: 800px;
+            height: 600px;
+        }
+    
+        .yubin-img-large {
+            width: 400px;
+            height: 533px;
+        }
+    
+        .yubin-img-small {
+            width: 300px;
+            height: 266px;
+        }
+    
+        .yubin-img-small:last-child {
+            height: 225px;
+        }
+    
+        .yubin-img-final {
+            width: 900px;
+            height: 675px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .yubin-header-zone {
+            padding-top: 128px;
+        }
+    
+        .yubin-main-title {
+            font-size: 36px;
+        }
+    
+        .yubin-sub-title {
+            font-size: 20px;
+        }
+    
+        .yubin-author-name {
+            font-size: 36px;
+        }
+    
+        .yubin-text-intro,
+        .yubin-text-block {
+            font-size: 18px;
+            margin-top: 208px;
+        }
+    
+        .yubin-title-dual {
+            font-size: 48px;
+        }
+    }
+    
+    @media (max-width: 640px) {
+        .yubin-header-zone {
+            padding: 80px 16px 0;
+        }
+    
+        .yubin-header-inner {
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .yubin-main-title {
+            font-size: 30px;
+        }
+    
+        .yubin-sub-title {
+            font-size: 18px;
+        }
+    
+        .yubin-author-name {
+            font-size: 30px;
+            text-align: left;
+        }
+    
+        .yubin-text-intro,
+        .yubin-text-block {
+            padding: 0 16px;
+            font-size: 16px;
+            margin-top: 96px;
+        }
+    
+        .yubin-img-wrap {
+            padding: 0 16px;
+            margin-top: 64px;
+        }
+    
+        .yubin-img-first {
+            width: 451px;
+            height: 320px;
+        }
+    
+        .yubin-img-second {
+            width: 320px;
+            height: 240px;
+        }
+    
+        .yubin-img-third {
+            width: 320px;
+            height: 427px;
+        }
+    
+        .yubin-img-fourth {
+            width: 320px;
+            height: 240px;
+        }
+    
+        .yubin-gallery {
+            flex-direction: column;
+            padding: 0 16px;
+            margin-top: 128px;
+        }
+    
+        .yubin-img-large {
+            width: 320px;
+            height: 427px;
+        }
+    
+        .yubin-img-small {
+            width: 320px;
+            height: 284px;
+        }
+    
+        .yubin-img-small:last-child {
+            height: 240px;
+        }
+    
+        .yubin-img-final {
+            width: 320px;
+            height: 240px;
+            margin-bottom: 40px;
+        }
+    
+        .yubin-title-dual {
+            font-size: 30px;
+        }
+    }
+    

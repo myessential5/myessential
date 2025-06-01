@@ -1,0 +1,510 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Space+Grotesk:300,700");
+@import "//cdn.jsdelivr.net/npm/font-kopub@1.0";
+
+/* 공통 CSS */
+    html, body{
+        width: 50;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        cursor: crosshair;
+    }
+
+    #wrap{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main{
+        flex: 1;
+        margin-top: 150px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* 공통 CSS _ 헤더 영역 */
+
+    #header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 999;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header.scrolled{
+        background-color: rgb(0, 0, 0);
+        transition: background-color 1s ease-in;
+    }
+
+    #header.scrolled .header-title a,
+    #header.scrolled .header-nav a {
+    color: white;
+    }
+
+    .header-title{
+        font-size: 2.5rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-left: 40px;
+    }
+
+    .header-title p{
+        margin: 0;
+        font-weight: 900;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-title p:hover{
+        font-weight: 100;
+    }
+
+    .header-nav{
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    .header-nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .header-nav li{
+        float: left;
+        margin-left: 40px;
+    }
+
+    .header-nav a{
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-nav a:hover{
+        font-weight: 900;
+    }
+
+
+    /* 공통 CSS _ footer 영역 */
+
+    #footer{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    #footer p{
+        margin: 0;
+    }
+
+    .footer-nameTag{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-subTag{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+        margin-top: 30px; 
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .footer-subTag p{
+        margin-top: 10px;
+    }
+
+    .footer-nameTag p{
+        padding: 30px;
+        font-weight: 300;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .footer-nameTag p:hover{
+        font-weight: 900;   
+    }
+
+
+/* 김태환 CSS */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  /* height: 100%; */
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "KoPubWorldDotum-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/61838df7c0542dd581a29201/fonts/kopub-dotum-bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "KoPubWorldDotum-Light";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6074ebaf33c6fe6654c15702/fonts/kopubworld-dotum-light.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "KoPubWorldDotum_Pro-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/60389b2e989ddfd8c4beca19/fonts/kopubworld-dotum-pro-bold.otf")
+    format("opentype");
+}
+
+.screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  background-color: #ffffff;
+  width: 1920px;
+  height: 11549px;
+  position: relative;
+}
+
+.screen .overlap {
+  height: 1045px;
+  top: 1105px;
+  left: 40px;
+  position: absolute;
+  width: 1840px;
+}
+
+.screen .overlap-group {
+  height: 1015px;
+  top: 30px;
+  left: 0;
+  position: absolute;
+  width: 1840px;
+}
+
+.screen .element {
+  position: absolute;
+  width: 1840px;
+  height: 931px;
+  top: 84px;
+  left: 0;
+}
+
+.screen .ASSEMBLED-IN {
+  position: absolute;
+  width: 638px;
+  top: 0;
+  left: 1202px;
+  font-family: "Space Grotesk", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  text-align: right;
+  letter-spacing: -0.60px;
+  line-height: 24.0px;
+}
+
+.screen .text-wrapper {
+  position: absolute;
+  width: 638px;
+  top: 0;
+  left: 0;
+  font-family: "Space Grotesk", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 64px;
+  letter-spacing: -1.92px;
+  line-height: 102.4px;
+  white-space: nowrap;
+}
+
+.screen .text-wrapper-2 {
+  position: absolute;
+  width: 170px;
+  top: 57px;
+  left: 835px;
+  font-family: "Space Grotesk", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.60px;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.screen .img {
+  position: absolute;
+  width: 1220px;
+  height: 792px;
+  top: 2763px;
+  left: 40px;
+}
+
+.screen .element-2 {
+  position: absolute;
+  width: 600px;
+  height: 396px;
+  top: 2763px;
+  left: 1280px;
+}
+
+.screen .element-3 {
+  position: absolute;
+  width: 1065px;
+  height: 691px;
+  top: 4004px;
+  left: 40px;
+}
+
+.screen .element-4 {
+  position: absolute;
+  width: 1065px;
+  height: 688px;
+  top: 4716px;
+  left: 815px;
+}
+
+.screen .kakaotalk {
+  position: absolute;
+  width: 1220px;
+  height: 824px;
+  top: 5809px;
+  left: 40px;
+}
+
+.screen .kakaotalk-2 {
+  position: absolute;
+  width: 288px;
+  height: 426px;
+  top: 6207px;
+  left: 1592px;
+  object-fit: cover;
+}
+
+.screen .kakaotalk-3 {
+  position: absolute;
+  width: 1920px;
+  height: 1263px;
+  top: 7057px;
+  left: 0;
+}
+
+.screen .kakaotalk-4 {
+  position: absolute;
+  width: 755px;
+  height: 1117px;
+  top: 8858px;
+  left: 40px;
+  object-fit: cover;
+}
+
+.screen .kakaotalk-5 {
+  position: absolute;
+  width: 755px;
+  height: 1117px;
+  top: 8857px;
+  left: 815px;
+  object-fit: cover;
+}
+
+.screen .text-wrapper-3 {
+  position: absolute;
+  width: 1347px;
+  top: 297px;
+  left: 302px;
+  font-family: "Space Grotesk", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 380px;
+  letter-spacing: -11.40px;
+  line-height: 608.0px;
+  white-space: nowrap;
+}
+
+.screen .kakaotalk-6 {
+  position: absolute;
+  width: 290px;
+  height: 196px;
+  top: 10836px;
+  left: 815px;
+  object-fit: cover;
+}
+
+.screen .p {
+  width: 394px;
+  top: 5808px;
+  left: 1280px;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 400;
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .span {
+  font-weight: 700;
+}
+
+.screen .text-wrapper-4 {
+  font-family: "KoPubWorldDotum-Light", Helvetica;
+  font-weight: 300;
+}
+
+.screen .element-5 {
+  width: 260px;
+  top: 6644px;
+  left: 1590px;
+  position: absolute;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .element-6 {
+  width: 337px;
+  top: 8331px;
+  left: 792px;
+  text-align: center;
+  position: absolute;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .element-7 {
+  width: 287px;
+  top: 9297px;
+  left: 1593px;
+  position: absolute;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .text-wrapper-5 {
+  position: absolute;
+  width: 255px;
+  top: 11060px;
+  left: 832px;
+  font-family: "KoPubWorldDotum-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 32.0px;
+  white-space: nowrap;
+}
+
+.screen .element-8 {
+  width: 902px;
+  top: 2169px;
+  left: 513px;
+  font-family: "KoPubWorldDotum_Pro-Bold", Helvetica;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .element-f {
+  position: absolute;
+  width: 600px;
+  top: 3175px;
+  left: 1280px;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .text-wrapper-6 {
+  width: 508px;
+  top: 3491px;
+  left: 1280px;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 700;
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .text-wrapper-7 {
+  width: 755px;
+  top: 4631px;
+  left: 1125px;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 700;
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
+
+.screen .element-9 {
+  width: 755px;
+  top: 4715px;
+  left: 40px;
+  font-family: "KoPubWorldDotum-Bold", Helvetica;
+  font-weight: 700;
+  text-align: right;
+  position: absolute;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 32.0px;
+}
