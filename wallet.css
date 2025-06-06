@@ -1,202 +1,5 @@
 @import "//cdn.jsdelivr.net/npm/font-kopub@1.0";
 
-html, body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    cursor: crosshair;
-}
-
-#wrap{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-#main{
-    flex: 1;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-/* 헤더 페이지 */
-
-#header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 999;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#header.scrolled{
-    background-color: rgb(0, 0, 0);
-    transition: background-color 1s ease-in;
-}
-
-#header.scrolled .header-title a,
-#header.scrolled .header-nav a {
-color: white;
-}
-
-.header-title{
-    font-size: 2.5rem;
-    font-weight: 900;
-    display: inline-block;
-    margin-left: 40px;
-}
-
-.header-title p{
-    margin: 0;
-    font-weight: 900;
-    transition: font-weight 0.5s ease, color 0.5s ease;
-}
-
-.header-title p:hover{
-    font-weight: 100;
-}
-
-.header-nav{
-    display: inline-block;
-    margin-right: 40px;
-}
-
-.header-nav ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-.header-nav li{
-    float: left;
-    margin-left: 40px;
-}
-
-.header-nav a{
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: black;
-    text-decoration: none;
-    transition: font-weight 0.5s ease, color 0.5s ease;
-}
-
-.header-nav a:hover{
-    font-weight: 900;
-}
-
-/* 글 페이지 */
-
-#main{
-    margin-top: 100px;
-}
-
-.article-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.article-top p{
-    margin: 0;
-}
-
-.article-topMainText{
-    font-size: 7.5rem;
-    font-weight: 900;
-}
-
-.article-topSubText{
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-.article-main{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    font-family: "KoPub Dotum" ,sans-serif;
-    font-weight: 900;
-    font-size: 1.25rem;
-    line-height: 160%;
-    border: 1px dashed black;
-}
-
-.article-main::selection{
-    background-color: rgb(229, 42, 42);
-    color: white;
-}
-
-.article-main p{
-    margin: 0;
-    padding: 10px;
-    
-}
-
-.article-gridContent{
-    /* border: 1px dashed black; */
-}
-
-.article-gridContent img{
-    object-fit: cover;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/* footer 영역 */
-
-#footer{
-    margin-top: 200px;
-    margin-bottom: 30px;
-}
-
-#footer p{
-    margin: 0;
-}
-
-.footer-nameTag{
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-subTag{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;  
-    margin-top: 30px; 
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.footer-subTag p{
-    margin-top: 10px;
-}
-
-.footer-nameTag p{
-    font-weight: 300;
-    transition: font-weight 0.5s ease, color 0.5s ease;
-}
-
-.footer-nameTag p:hover{
-    font-weight: 900;   
-}
-
-
-
 /* 본인의 이름을 작성한 다음 자신의 주석 아래 부분에 CSS 코드를 작성해주세요. */
 
 /* 임세은 css */
@@ -447,8 +250,8 @@ color: white;
 .wallet-main{
     margin: 90px;
 }
- 
-  @media (max-width: 1900px) {
+
+  @media (max-width: 1900px) and (min-width: 481px){
     .wallet-scroll{
       border: 3px black dotted; /* 원하는 border 스타일 */
       border-bottom: none;
@@ -464,7 +267,7 @@ color: white;
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1000px) and (min-width: 481px){
     .wallet-top-title p{
         font-size: 10rem;
         transition: 1s;
@@ -474,5 +277,35 @@ color: white;
         transition: 1s;
     }
   }
-
-  
+/* 모바일 반응형 */
+  @media (max-width: 480px) {
+    .wallet-top-title p{
+        font-size: 4.5rem;
+        border-width: 5px;
+    }
+    .wallet-top-sub p{
+        font-size: 1rem;
+    }
+    .wallet-thumbnail{
+        margin-bottom: 70px;
+    }
+    .wallet-layout-1, .wallet-layout-2, .wallet-layout-3, .wallet-layout-4, .wallet-layout-5, .wallet-layout-6{
+        all: unset;
+    }
+    .wallet-layout-1 img, .wallet-layout-2 img, .wallet-layout-3 img, .wallet-layout-4 img, .wallet-layout-5 img, .wallet-layout-6 img{
+        width: 100%;
+        margin-top: 40px;
+    } 
+    .wallet-layout-1 p, .wallet-layout-2 p, .wallet-layout-3 p, .wallet-layout-4 p, .wallet-layout-5 p, .wallet-layout-6 p{
+        all: unset;
+    }
+    .wallet-main{
+        margin: 0;
+        line-height: 40px;
+    }
+    .wallet-scroll{
+        border-bottom: 3px rgb(170, 170, 170) solid;
+        
+    }
+        
+  }

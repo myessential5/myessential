@@ -11,15 +11,29 @@
         font-optical-sizing: auto;
         font-style: normal;
         cursor: crosshair;
+        /* overflow-x: hidden; */
+    }
+
+    * {
+        box-sizing: border-box;
     }
 
     #wrap{
+        width: 100%;
         flex: 1;
         display: flex;
         flex-direction: column;
     }
 
     #main{
+        flex: 1;
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: rgb(243, 243, 243);
+    }
+
+    #mainpage-wrap{
         flex: 1;
         margin-top: 150px;
         padding-top: 50px;
@@ -43,6 +57,7 @@
         z-index: 999;
         padding-top: 10px;
         display: flex;
+        align-items: flex-end;
         justify-content: space-between;
     }
 
@@ -105,7 +120,7 @@
 
     #footer{
         margin-top: 50px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     #footer p{
@@ -122,7 +137,7 @@
         justify-content: space-between;
         flex-direction: column;
         align-items: center;  
-        margin-top: 30px; 
+        margin-top: 10px; 
         font-weight: 300;
         font-size: 1rem;
     }
@@ -133,15 +148,9 @@
 
     .footer-nameTag p{
         padding: 30px;
-        font-weight: 300;
+        font-weight: 900;
         transition: font-weight 0.5s ease, color 0.5s ease;
     }
-
-    .footer-nameTag p:hover{
-        font-weight: 900;   
-    }
-
-    /* 본인의 이름을 작성한 다음 자신의 주석 아래 부분에 CSS 코드를 작성해주세요. */
 
     /* 권호준 CSS */
 
@@ -223,8 +232,12 @@
         font-weight: 900;
         font-size: 1.25rem;
         line-height: 160%;
-        border: 2px dashed black;
         padding: 10px;
+    }
+
+    .article-main-3 p{
+        padding: 10px;
+        border: 2px dashed black;
     }
 
     .grid-text, .grid-image{
@@ -245,7 +258,8 @@
     .article-main-4{
         margin: 200px 40px 0 40px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 40px;
         align-items: center;
         font-family: "KoPub Dotum" ,sans-serif;
@@ -263,3 +277,148 @@
         padding: 10px;
     }
 
+/* Carabiner @media */
+
+@media all and (min-width:768px) and (max-width:1304px){
+    .article-main , .article-main-2, .article-main-4 {
+        display: flex;
+        flex-direction: column;
+        font-family: "KoPub Dotum" ,sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 160%;
+    }
+
+    .article-griditem img{
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .article-griditem p {
+        border: 2px dashed black;
+        padding: 10px;
+        margin-right: 0;
+}
+
+    .article-main-2 p {
+    width: 100%;
+    border: 2px dashed black;
+    padding: 10px;
+}
+
+    .article-main-3{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    html, body {
+        /* overflow-x: hidden; */
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .article-main, .article-main-2, .article-main-4 {
+        display: flex;
+        flex-direction: column;
+        font-family: "KoPub Dotum", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 180%;
+        padding: 0 20px;
+    }
+
+    .article-griditem img,
+    .article-main-2 img,
+    .grid-image img,
+    .lastgrid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .article-main-2 p,
+    .article-griditem p,
+    .article-main-3 p,
+    .article-main-4 p {
+        width: 100%;
+        border: 2px dashed black;
+        padding: 10px;
+    }
+
+    #footer{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .footer-nameTag{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer-nameTag p {
+        text-align: center;
+        padding: 10px;
+        font-weight: 500;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .footer-subTag{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+        margin-top: 30px; 
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+
+    #header {
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    background-color: white;
+    /* z-index: 999; */
+    position: absolute;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+    .header-title{
+        font-size: 2rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-left: 0px;
+        
+    }
+
+    .header-nav{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        
+    }
+
+    .header-nav li {
+        float: left;
+        margin-left: 6px;
+        margin-right: 6px;
+}
+
+    .header-nav a {
+        font-size: 1rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+}   
+}

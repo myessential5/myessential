@@ -1,0 +1,237 @@
+html, body{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        cursor: crosshair;
+        /* overflow-x: hidden; */
+    }
+
+    /* * {
+        box-sizing: border-box;
+    } */
+
+    #wrap{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main{
+        flex: 1;
+        margin-top: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #mainpage-wrap{
+        flex: 1;
+        margin-top: 150px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: rgb(243, 243, 243);
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* 공통 CSS _ 헤더 영역 */
+
+    #header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 999;
+        padding-top: 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    #header.scrolled{
+        background-color: rgb(0, 0, 0);
+        transition: background-color 1s ease-in;
+    }
+
+    #header.scrolled .header-title a,
+    #header.scrolled .header-nav a {
+    color: white;
+    }
+
+    .header-title{
+        font-size: 2.5rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-left: 40px;
+    }
+
+    .header-title p{
+        margin: 0;
+        font-weight: 900;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-title p:hover{
+        font-weight: 100;
+    }
+
+    .header-nav{
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    .header-nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .header-nav li{
+        float: left;
+        margin-left: 40px;
+    }
+
+    .header-nav a{
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .header-nav a:hover{
+        font-weight: 900;
+    }
+
+
+    /* 공통 CSS _ footer 영역 */
+
+    #footer{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    #footer p{
+        margin: 0;
+    }
+
+    .footer-nameTag{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-subTag{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+        margin-top: 10px; 
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .footer-subTag p{
+        margin-top: 10px;
+    }
+
+    .footer-nameTag p{
+        padding: 30px;
+        font-weight: 900;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+
+@media (max-width: 767px) {
+    html, body {
+        /* overflow-x: hidden; */
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #footer{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .footer-nameTag{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer-nameTag p {
+        text-align: center;
+        padding: 10px;
+        font-weight: 500;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+    }
+
+    .footer-subTag{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+        margin-top: 30px; 
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+
+    #header {
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    background-color: white;
+    /* z-index: 999; */
+    position: absolute;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .header-title{
+        font-size: 2rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-left: 0px;
+        
+    }
+
+    .header-nav{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        
+    }
+
+    .header-nav li {
+        float: left;
+        margin-left: 6px;
+        margin-right: 6px;
+}
+
+    .header-nav a {
+        font-size: 1rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        transition: font-weight 0.5s ease, color 0.5s ease;
+}   
+}
